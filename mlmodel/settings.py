@@ -136,7 +136,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-from keras.models import load_model
-import joblib
-scaler = joblib.load('api/modelss/scaler.pkl')
-model = load_model('api/modelss/car_price_predictor.h5')
+
