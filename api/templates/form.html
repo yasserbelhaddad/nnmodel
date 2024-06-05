@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Form</title>
+</head>
+<body>
+    <h2>Enter Car Details</h2>
+    <form id="carForm" action="/predict/" method="POST">
+        {% csrf_token %}
+        <label for="Kilométrage">Kilométrage:</label><br>
+        <input type="text" id="Kilométrage" name="Kilométrage"><br>
+        <label for="Année">Année:</label><br>
+        <input type="text" id="Année" name="Année"><br>
+        <label for="MoteurType">MoteurType:</label><br>
+        <input type="text" id="MoteurType" name="MoteurType"><br>
+        <label for="Boite_encoded">Boite_encoded:</label><br>
+        <input type="text" id="Boite_encoded" name="Boite_encoded"><br>
+        <label for="Energie_encoded">Energie_encoded:</label><br>
+        <input type="text" id="Energie_encoded" name="Energie_encoded"><br>
+        <label for="Modèle_encoded">Modèle_encoded:</label><br>
+        <input type="text" id="Modèle_encoded" name="Modèle_encoded"><br>
+        <label for="Marque_encoded">Marque_encoded:</label><br>
+        <input type="text" id="Marque_encoded" name="Marque_encoded"><br>
+        <button type="submit">Predict</button>
+    </form>
+    <div id="predictionResult"></div>
+</body>
+</html>
