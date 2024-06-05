@@ -52,6 +52,7 @@ def predict(request):
     X_new_scaled = scaler.transform(features_df)
     # Perform prediction
     prediction = model.predict(X_new_scaled)
+    print(prediction)
     return render(request, 'prediction.html', {'prediction': prediction})
     # Return prediction as JSON response
     # return Response({'features_array': features,'prediction':prediction})
