@@ -1,7 +1,6 @@
 from django.shortcuts import redirect, render
 # from django.conf import settings
 # Create your views here.
-from mlmodel.settings import scaler,model
 from sklearn.preprocessing import StandardScaler  # Import StandardScaler for data scaling
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
