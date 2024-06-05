@@ -10,6 +10,7 @@ from rest_framework.response import Response
 from keras.models import load_model
 import joblib
 
+
 import pandas as pd
 from .dictionery import (
     boite_encoding,
@@ -17,6 +18,10 @@ from .dictionery import (
     modele_encoding,
     marque_encoding
 )
+
+
+
+
 
 
 
@@ -28,6 +33,8 @@ def predict(request):
     # model = joblib.load('api/modelss/modell.pkl')
     # model = settings.model2
     # Get input data from the request body
+    scaler = joblib.load('api/modelss/scaler.pkl')
+    model = load_model('api/modelss/car_price_predictor.h5')
     input_data = request.data
     
     # Extract features from input data
